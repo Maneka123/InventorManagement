@@ -1,0 +1,55 @@
+body{
+    margin : 0;
+    padding :0;
+    background :#c1ccd4;
+}
+
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  input {
+    width: 70%;
+    height:15%;
+  }
+
+
+  ::placeholder{
+    color: #000;
+    font-size: 1rem;
+    text-transform: lowercase;
+  }
+
+  input[type=text] {
+    padding:10px;
+    margin:10px 0; 
+  }
+  input, textarea {
+    font-family:inherit;
+    font-size: inherit;
+  }
+
+
+form {
+background-color : #D2691E;
+}
+form {
+  border : 1px solid #000;
+  padding : 5px;
+  }
+  

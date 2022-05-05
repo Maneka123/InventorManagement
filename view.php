@@ -50,10 +50,10 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <td align="center"><?php echo $row["itemPrice"]; ?></td>
 <td align="center"><?php echo $row["addedDate"]; ?></td>
 <td align="center">
-<a href="edit.php?id=<?php echo $row["id"]; ?>">Edit</a>
+<a href="edit.php?id=<?php echo $row["itemCode"]; ?>">Edit</a>
 </td>
 <td align="center">
-<a href="delete.php?id=<?php echo $row["id"]; ?>">Delete</a>
+<a href="delete.php?id=<?php echo $row["itemCode"]; ?>">Delete</a>
 </td>
 </tr>
 <?php $count++; } ?>

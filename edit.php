@@ -57,18 +57,18 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 <input type="hidden" name="new" value="1" />
 <input name="id" type="hidden" value="<?php echo $row['itemCode'];?>" />
 <p><input type="text" name="name" placeholder="Enter Item Name" 
-required value="<?php echo $row['name'];?>" /></p>
+required value="<?php echo $row['itemName'];?>" /></p>
 <p><input type="text" name="cat" placeholder="Enter Item Catagory" 
-required value="<?php echo $row['cat'];?>" /></p>
+required value="<?php echo $row['itemCatagory'];?>" /></p>
 
 <p><input type="text" name="brand" placeholder="Enter Item Brand" 
-required value="<?php echo $row['cat'];?>" /></p>
+required value="<?php echo $row['itemBrand'];?>" /></p>
 
 <p><input type="text" name="quantity" placeholder="Enter Item Quantity" 
-required value="<?php echo $row['cat'];?>" /></p>
+required value="<?php echo $row['itemQuantity'];?>" /></p>
 
 <p><input type="text" name="price" placeholder="Enter Item Price" 
-required value="<?php echo $row['cat'];?>" /></p>
+required value="<?php echo $row['itemPrice'];?>" /></p>
 
 <p><input name="submit" type="submit" value="Update" /></p>
 </form>

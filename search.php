@@ -35,6 +35,8 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
 </head>
 <body>
 <?php
+
+if(isset($_GET["buttonSearch"])){
 	$query = $_GET['query']; 
 	// gets value sent over search form
 	
@@ -59,7 +61,7 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
 		// '%$query%' is what we're looking for, % means anything, for example if $query is Hello
 		// it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
 		// or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
-		
+		$addrOne="mySearch.html";
 		if(mysqli_num_rows($raw_results) > 0){ // if one or more rows are returned do following
 			
             echo"<h1>Search Results </h1>";
@@ -68,20 +70,24 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
 			// $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
 			
 				echo "<table><tr><th>Item Name</th><th>Item Catagory</th><th>Item Brand</th><th>Item Quantity</th><th>Item Price</th></tr><td>".$results['itemName']."</td><td>".$results['itemCatagory']."</td><td>".$results['itemBrand']."</td><td>".$results['itemQuantity']."</td><td>".$results['itemPrice']."</table>";
+				//$addrOne="mySearch.html";
+				echo "<a href='".$addrOne."'>dashboard</a>";
 				// posts results gotten from database(title and text) you can also show id ($results['id'])
 			}
 			
 		}
 		else{ // if there is no matching rows do following
 			echo "No results";
+			echo "<br><a href='".$addrOne."'>dashboard</a>";
 		}
 		
 	}
 	else{ // if query length is less than minimum
 		echo "Minimum length is ".$min_length;
+		echo "<a href='".$addrOne."'>dashboard</a>";
 	}
 	 
-
+}
 ?>
 </body>
 </html>

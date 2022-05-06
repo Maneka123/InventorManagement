@@ -31,6 +31,14 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
         table,th,td{
             border:1px solid black;
         }
+
+		h1{align:center;}
+
+		div {
+  border: 5px outset red;
+  background-color: red;
+  text-align: center;
+}
     </style>   
 </head>
 <body>
@@ -42,7 +50,7 @@ if(isset($_GET["buttonSearch"])){
 	
 	$min_length = 3;
 	// you can set minimum length of the query if you want
-	
+	$addrOne="mySearch.html";
 	if(strlen($query) >= $min_length){ // if query length is more or equal minimum length then
 		
 		$query = htmlspecialchars($query); 
@@ -61,7 +69,7 @@ if(isset($_GET["buttonSearch"])){
 		// '%$query%' is what we're looking for, % means anything, for example if $query is Hello
 		// it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
 		// or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
-		$addrOne="mySearch.html";
+		//$addrOne="mySearch.html";
 		if(mysqli_num_rows($raw_results) > 0){ // if one or more rows are returned do following
 			
             echo"<h1>Search Results </h1>";
@@ -77,14 +85,14 @@ if(isset($_GET["buttonSearch"])){
 			
 		}
 		else{ // if there is no matching rows do following
-			echo "No results";
-			echo "<br><a href='".$addrOne."'>dashboard</a>";
+			echo "<div><h1 >No Results</h1></div>";
+			echo "<br><a href='".$addrOne."'>Search Again</a>";
 		}
 		
 	}
 	else{ // if query length is less than minimum
-		echo "Minimum length is ".$min_length;
-		echo "<a href='".$addrOne."'>dashboard</a>";
+		echo "<div><h1 >Sorry, minimum length is ".$min_length."</h1></div>";
+		echo "<a href='".$addrOne."'>Search Again</a>";
 	}
 	 
 }

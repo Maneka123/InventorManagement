@@ -22,12 +22,67 @@ $row = mysqli_fetch_assoc($result);
 <title>Update Record</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
+
+<style> 
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+body {
+  background-image: url('b5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+</style>
+<style>
+.footer {
+  position : sticky;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height:70px;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<style>
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  text-align: center;
+
+}
+</style>
 <body>
+
+<div class="header" id="myHeader">
+  <h2>Inventory Management</h2>
+</div>
+
 <div class="form">
 <p><a href="dashboard.php">Dashboard</a> 
 | <a href="insert.php">Insert New Record</a> 
 | <a href="logout.php">Logout</a></p>
-<h1>Update Record</h1>
+<h1 align="center">Update Record</h1>
 <?php
 $status = "";
 if(isset($_POST['new']) && $_POST['new']==1)
@@ -52,7 +107,7 @@ $status = "Record Updated Successfully. </br></br>
 echo '<p style="color:#FF0000;">'.$status.'</p>';
 }else {
 ?>
-<div>
+<div align="center">
 <form name="form" method="post" action=""> 
 <input type="hidden" name="new" value="1" />
 <input name="id" type="hidden" value="<?php echo $row['itemCode'];?>" />
@@ -70,10 +125,16 @@ required value="<?php echo $row['itemQuantity'];?>" /></p>
 <p><input type="text" name="price" placeholder="Enter Item Price" 
 required value="<?php echo $row['itemPrice'];?>" /></p>
 
-<p><input name="submit" type="submit" value="Update" /></p>
+<p><input class="button" name="submit" type="submit" value="Update" /></p>
 </form>
 <?php } ?>
 </div>
 </div>
+
+<div class="footer">
+  <p></p>
+</div>
+
+
 </body>
 </html>

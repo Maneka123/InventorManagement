@@ -110,7 +110,7 @@ body {
 
 
 <div class="form">
-<p><a href="index.php">Home</a> 
+<p><a href="home.php">Home</a> 
 | <a href="insert.php">Insert New Record</a> 
 | <a href="logout.php">Logout</a>
 <a href="dashboard.php">Dashboard</a><p>

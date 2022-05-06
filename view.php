@@ -19,12 +19,101 @@ $servername='localhost';
 <title>View Records</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
+<style>.refOne {
+    width:50%;
+  background-color: blue;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.refTwo {
+    width:50%;
+  background-color:red;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+</style>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {background-color: yellow;}
+tr:nth-child(even) {background-color: pink;}
+tr:nth-child(odd) {background-color: tomato;}
+</style>
+
+<style>
+body {
+  background-image: url('b3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style> 
+<style>
+
+    .myHeading{
+        padding: 10px 16px;
+  background: green;
+  color: #f1f1f1;
+  text-align: center;
+  width : 50%;
+  
+
+    }
+</style>
+
+<style>
+.footer {
+  position : fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height:70px;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<style>
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  text-align: center;
+
+}
+</style>
+
+
 <body>
+<div class="header" id="myHeader">
+  <h2>Inventory Management</h2>
+</div>
+
+
+
 <div class="form">
 <p><a href="index.php">Home</a> 
 | <a href="insert.php">Insert New Record</a> 
 | <a href="logout.php">Logout</a></p>
-<h2>View Records</h2>
+<h2 class="myHeading">View Records</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>
 <tr>
@@ -34,6 +123,9 @@ $servername='localhost';
 <th><strong>Item Brand</strong></th>
 <th><strong>Item Quantity</strong></th>
 <th><strong>Item Price</strong></th>
+<th><strong>Added Date</strong></th>
+<th><strong>Edit</strong></th>
+<th><strong>Delete</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -50,15 +142,22 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <td align="center"><?php echo $row["itemPrice"]; ?></td>
 <td align="center"><?php echo $row["addedDate"]; ?></td>
 <td align="center">
-<a href="edit.php?id=<?php echo $row["itemCode"]; ?>">Edit</a>
+<a class="refOne"href="edit.php?id=<?php echo $row["itemCode"]; ?>">Edit</a>
 </td>
 <td align="center">
-<a href="delete.php?id=<?php echo $row["itemCode"]; ?>">Delete</a>
+<a class="refTwo" href="delete.php?id=<?php echo $row["itemCode"]; ?>">Delete</a>
 </td>
 </tr>
 <?php $count++; } ?>
 </tbody>
 </table>
 </div>
+
+<div class="footer">
+  <p></p>
+</div>
+
+
+
 </body>
 </html>

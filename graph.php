@@ -57,12 +57,15 @@
 <body>
 
         <body>
+        
 
         <div class="header" id="myHeader">
         <h2>Inventory Management</h2>
       </div>
 
-
+      <p><a href="dashboard.php">Dashboard</a> 
+| <a href="view.php">View Records</a> 
+| <a href="logout.php">Logout</a></p>
 
             <div style="width:60%;hieght:20%;text-align:center">
                 <h2 class="page-header" >Analytics Reports </h2>

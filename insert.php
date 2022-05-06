@@ -37,13 +37,89 @@ if(isset($_POST['new']) && $_POST['new']==1){
 <title>Insert New Record</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
+<style> 
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+
+<style>
+body {
+  background-image: url('b2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+h1 {
+  color: green;
+}
+
+</style> 
+
+<style>
+.footer {
+  position : sticky;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height:70px;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<style>
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  text-align: center;
+
+}
+</style></style>
+
+
+<style>
+
+    .myHeading{
+        padding: 10px 16px;
+  background: green;
+  color: #f1f1f1;
+  text-align: center;
+  width : 50%;
+
+    }
+</style>
+
 <body>
+
+
+<div class="header" id="myHeader">
+  <h2>Inventory Management</h2>
+</div>
+
+
 <div class="form">
 <p><a href="dashboard.php">Dashboard</a> 
 | <a href="view.php">View Records</a> 
 | <a href="logout.php">Logout</a></p>
-<div>
-<h1>Insert New Record</h1>
+<div align="center">
+<h1 class=myHeading>Insert New Record</h1>
 <form name="form" method="post" action=""> 
 <input type="hidden" name="new" value="1" />
 <p><input type="text" name="name" placeholder="Enter item Name" required /></p>
@@ -53,10 +129,16 @@ if(isset($_POST['new']) && $_POST['new']==1){
 <p><input type="text" name="quantity" placeholder="Enter Quantity" required /></p>
 <p><input type="text" name="price" placeholder="Enter Item Price" required /></p>
 
-<p><input name="submit" type="submit" value="Submit" /></p>
+<p><input name="submit" type="submit" value="Submit" class="button"/></p>
 </form>
 <p style="color:#FF0000;"><?php echo $status; ?></p>
 </div>
 </div>
+
+<div class="footer">
+  <p></p>
+</div>
+
+
 </body>
 </html>

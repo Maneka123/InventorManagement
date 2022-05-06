@@ -65,7 +65,7 @@
 
       <p><a href="dashboard.php">Dashboard</a> 
 | <a href="view.php">View Records</a> 
-| <a href="logout.php">Logout</a></p>
+| </p>
 
             <div style="width:60%;hieght:20%;text-align:center">
                 <h2 class="page-header" >Analytics Reports </h2>

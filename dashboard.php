@@ -12,7 +12,6 @@
 <p><a href="index.php">Home</a><p>
 <p><a href="insert.php">Insert New Item</a></p>
 <p><a href="view.php">View Item Records</a><p>
-<p><a href="logout.php">Logout</a></p>
 <p><a href="mySearch.html">Search Item</a></p>
 <p><a href="reportOne.php">Generate report</a></p>
 </div>

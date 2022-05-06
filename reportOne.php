@@ -97,7 +97,9 @@ echo "<h1>The number of Item records added between the two dates are  : {$count}
         <h2>Inventory Management</h2>
       </div>
  
-    
+      <p><a href="dashboard.php">Dashboard</a> 
+| <a href="view.php">View Records</a> 
+| <a href="logout.php">Logout</a></p>
 
 
 <br>

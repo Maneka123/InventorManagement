@@ -80,6 +80,8 @@ $conn=mysqli_connect($servername,$username,$password,"$dbname");
 	else{ // if query length is less than minimum
 		echo "Minimum length is ".$min_length;
 	}
+	 
+
 ?>
 </body>
 </html>

@@ -14,6 +14,9 @@
 <h1>Specialization : Information Technology</h1>
 <h1>University : SLIIT</h1>
 <h1>Group : REG/WD/73</h1>
+<h1>Programming Languages : HTML , CSS , PHP</h1>
+<h1>Tools : Azure Boards, Github , Selenium , SonarQube</h1>
+<h1>Source code editor : Visual Studio Code</h1>
 </div>
 <p><a href="dashboard.php">Dashboard</a><p>
 </body>

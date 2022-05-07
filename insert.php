@@ -20,7 +20,7 @@ if(isset($_POST['new']) && $_POST['new']==1){
     $price = $_REQUEST['price'];
 
 
-    //$submittedby = $_SESSION["username"];
+    
     $ins_query="insert into inventory
     (`itemName`,`itemCatagory`,`itemBrand`,`itemQuantity`,`itemPrice`,`addedDate`)values
     ('$name','$catagory','$brand','$quantity','$price','$trn_date')";
@@ -31,7 +31,7 @@ if(isset($_POST['new']) && $_POST['new']==1){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Insert New Record</title>
@@ -104,6 +104,10 @@ h1 {
   width : 50%;
 
     }
+  div{
+  text-align:center;
+}
+
 </style>
 
 <body>
@@ -118,8 +122,8 @@ h1 {
 <p><a href="dashboard.php">Dashboard</a> 
 | <a href="view.php">View Records</a> 
 | <a href="logout.php">Logout</a></p>
-<div align="center">
-<h1 class=myHeading>Insert New Record</h1>
+<div >
+<h1 class=myHeading >Insert New Record</h1>
 <form name="form" method="post" action=""> 
 <input type="hidden" name="new" value="1" />
 <p><input type="text" name="name" placeholder="Enter item Name" required /></p>

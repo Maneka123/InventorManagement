@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>Update Record</title>
@@ -71,6 +71,9 @@ body {
   text-align: center;
 
 }
+h1,div{
+  text-align:center;
+}
 </style>
 <body>
 
@@ -82,7 +85,7 @@ body {
 <p><a href="dashboard.php">Dashboard</a> 
 | <a href="insert.php">Insert New Record</a> 
 | <a href="logout.php">Logout</a></p>
-<h1 align="center">Update Record</h1>
+<h1 >Update Record</h1>
 <?php
 $status = "";
 if(isset($_POST['new']) && $_POST['new']==1)
@@ -97,7 +100,7 @@ $quantity =$_REQUEST['quantity'];
 $price =$_REQUEST['price'];
 
 
-//$submittedby = $_SESSION["username"];
+
 $update="update inventory set addedDate='".$trn_date."',
 itemName='".$name."', itemCatagory='".$cat."',itemBrand='".$brand."',itemQuantity='".$quantity."',itemPrice='".$price."'
  where itemCode='".$id."'";
@@ -107,7 +110,7 @@ $status = "Record Updated Successfully. </br></br>
 echo '<p style="color:#FF0000;">'.$status.'</p>';
 }else {
 ?>
-<div align="center">
+<div >
 <form name="form" method="post" action=""> 
 <input type="hidden" name="new" value="1" />
 <input name="id" type="hidden" value="<?php echo $row['itemCode'];?>" />

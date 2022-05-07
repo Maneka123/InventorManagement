@@ -1,5 +1,5 @@
 <?php
-//require('db.php');
+
 if(isset($_POST["search"])){
 $servername='localhost';
     $username='root';
@@ -16,7 +16,7 @@ $dateOne=$_POST['dateOne'];
 $dateTwo=$_POST['dateTwo'];
 
 $query="Select itemName FROM inventory WHERE addedDate BETWEEN '$dateOne' AND '$dateTwo' order by addedDate ";
-//$query = "DELETE FROM inventory WHERE itemCode=$id"; 
+
 $result = mysqli_query($conn,$query) or die ( mysqli_error());
 
 $count=mysqli_num_rows($result);
@@ -25,10 +25,10 @@ echo "<h1>The number of Item records added between the two dates are  : {$count}
 
     }
 
-//header("Location: reportOne.php"); 
+
 ?>
 <!DOCTYPE html >
-<html >
+<html lang="en">
 <head>
 	<title>Report</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -48,7 +48,9 @@ echo "<h1>The number of Item records added between the two dates are  : {$count}
       padding: 12px 20px 12px 40px;
       transition: width 0.1s ease-in-out;
     }
-    
+    div{
+  text-align:center;
+}
     
     </style>
 
@@ -103,7 +105,7 @@ echo "<h1>The number of Item records added between the two dates are  : {$count}
 
 
 <br>
-    <div align="center">
+    <div >
     <form action="" method="POST">
         <input type="date" name="dateOne" /><br>
         <input type="date" name="dateTwo" /><br><br>

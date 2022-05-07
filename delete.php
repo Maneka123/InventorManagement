@@ -1,5 +1,4 @@
 <?php
-//require('db.php');
 
 $servername='localhost';
     $username='root';

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <style>
@@ -45,6 +45,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.center{
+  margin: auto;
+  width:60%;
+  
+}
+
 </style> 
 
 <title>Dashboard - Secured Page</title>
@@ -57,9 +64,9 @@ body {
 </div>
 
 
-<div class="form" align="center">
+<div class="center">
 <h1>Welcome to Dashboard.</h1>
-<p><a href="index.php">Home</a><p>
+<p><a href="home.php">Home</a><p>
 <p><a href="insert.php">Insert New Item</a></p>
 <p><a href="view.php">View Item Records</a><p>
 <p><a href="mySearch.html">Search Item</a></p>

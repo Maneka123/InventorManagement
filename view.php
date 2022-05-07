@@ -1,6 +1,5 @@
 <?php
-//require('db.php');
-//include("auth.php");
+
 $servername='localhost';
     $username='root';
     $password='';
@@ -13,7 +12,7 @@ $servername='localhost';
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>View Records</title>
@@ -115,10 +114,12 @@ body {
 
 <a href="dashboard.php">Dashboard</a><p>
 <h2 class="myHeading">View Records</h2>
-<table width="100%" border="1" style="border-collapse:collapse;">
+<table  border="1" style="border-collapse:collapse;">
+
+<caption>Results</caption>
 <thead>
 <tr>
-<th><strong>S.No</strong></th>
+<th><strong>Item Number</strong></th>
 <th><strong>Item Name</strong></th>
 <th><strong>Item Catagory</strong></th>
 <th><strong>Item Brand</strong></th>
@@ -131,25 +132,27 @@ body {
 </thead>
 <tbody>
 <?php
+
 $count=1;
 $sel_query="Select * from inventory ORDER BY itemCode desc;";
 $result = mysqli_query($conn,$sel_query);
 while($row = mysqli_fetch_assoc($result)) { ?>
-<tr><td align="center"><?php echo $count; ?></td>
-<td align="center"><?php echo $row["itemName"]; ?></td>
-<td align="center"><?php echo $row["itemCatagory"]; ?></td>
-<td align="center"><?php echo $row["itemBrand"]; ?></td>
-<td align="center"><?php echo $row["itemQuantity"]; ?></td>
-<td align="center"><?php echo $row["itemPrice"]; ?></td>
-<td align="center"><?php echo $row["addedDate"]; ?></td>
-<td align="center">
+<tr><td ><?php echo $count; ?></td>
+<td ><?php echo $row["itemName"]; ?></td>
+<td ><?php echo $row["itemCatagory"]; ?></td>
+<td ><?php echo $row["itemBrand"]; ?></td>
+<td ><?php echo $row["itemQuantity"]; ?></td>
+<td ><?php echo $row["itemPrice"]; ?></td>
+<td ><?php echo $row["addedDate"]; ?></td>
+<td >
 <a class="refOne"href="edit.php?id=<?php echo $row["itemCode"]; ?>">Edit</a>
 </td>
-<td align="center">
+<td >
 <a class="refTwo" href="delete.php?id=<?php echo $row["itemCode"]; ?>">Delete</a>
 </td>
 </tr>
-<?php $count++; } ?>
+<?php $count++; 
+} ?>
 </tbody>
 </table>
 </div>

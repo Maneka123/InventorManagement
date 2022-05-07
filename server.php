@@ -31,7 +31,7 @@ if(isset($_POST['insertMyValue']))
      mysqli_query($conn,$sql);
      $_SESSION['msg']="Item saved";
      header('location: indexThree.php');
-     //$results=mysqli_query($conn,"select * from inventory");
+     
 
 }
 
@@ -63,7 +63,7 @@ if ($conn->connect_error) {
 if(isset($_POST['checkItemAvailability']))
 {
 
-//$sql="select * from inventory where itemCatagory='fried rice'";
+
 
 $a=$_POST['catagory'];
 $b=$_POST['brand'];
@@ -79,7 +79,7 @@ if($result){
             if ($result->num_rows > 0) {
             // output data of each row
                       while($row = $result->fetch_assoc()) {
-                      //echo "Hello, I am there";
+                     
                             echo '<script language="javascript">alert("Hello there! The item is available");window.location.href = "indexThree.php";</script>';
                             
                         }
@@ -89,8 +89,9 @@ if($result){
                 
                 }
                 
-}}
-//$conn->close();                      
+}
+}
+                   
 ?>
                       
 
@@ -122,10 +123,9 @@ if(isset($_POST['searchMyValue']))
         $b=$row['itemCatagory'];
        
         
-        //$lname = $row['lname'];
-        //$age = $row['age'];
-        echo($a);
-        echo($b);
+        
+        echo $a;
+        echo $b;
         
         
       }  

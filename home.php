@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    
 <head>
+<title>Home page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<style>
+div{
+  text-align:center;
+}
+</style>
 </head>
 <body >
-    <div align="center">
-        <img src="b6.png">
+    <div >
+        <img src="b6.png" alt="SLIIT logo">
 <h1>Registration number : IT19980782</h1>
 <h1>Name : M. M. Wijesundara</h1>
 <h1>Module : IT Project Management</h1>

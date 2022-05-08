@@ -54,7 +54,7 @@ body {
 
 </style> 
 
-<title>Dashboard - Secured Page</title>
+<title>Dashboard</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>

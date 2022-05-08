@@ -44,6 +44,15 @@ input[type=text] {
   margin: 8px 0;
   box-sizing: border-box;
 }
+
+input[type=number] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
 </style>
 
 <style>
@@ -130,8 +139,8 @@ h1 {
 <p><input type="text" name="catagory" placeholder="Enter Item Catagory" required /></p>
 
 <p><input type="text" name="brand" placeholder="Enter Item Brand" required /></p>
-<p><input type="text" name="quantity" placeholder="Enter Quantity" required /></p>
-<p><input type="text" name="price" placeholder="Enter Item Price" required /></p>
+<p><input type="number" name="quantity" placeholder="Enter Quantity" min=1 required /></p>
+<p><input type="number" name="price" placeholder="Enter Item Price" min=100 required /></p>
 
 <p><input name="submit" type="submit" value="Submit" class="button"/></p>
 </form>
